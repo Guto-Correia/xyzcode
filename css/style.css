@@ -1,0 +1,1185 @@
+@import url("https://use.typekit.net/bjg4qzy.css");
+
+/* variaveis do layout */
+:root {
+    --cor-texto: #333333;
+    --cor-texto-suave: #ccc;
+    --cor-principal: #00c2ff;
+    --cor-destaque: #ff6b00;
+
+    --animate-duration: 8s;
+    --animate-delay: 0.9s;
+
+    --largura-maxima: 1500px;
+    --texto-tamanho: 16px;
+
+    --font-menu: paralucent-stencil, sans-serif;
+    --font-base: neue-haas-grotesk-display, sans-serif
+}
+
+/* fim das var */
+
+body {
+    /* weight,size,height line,font */
+
+    font: 300 1em/1.5em var(--font-base);
+    color: var(--cor-texto);
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-bottom: 1em;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+    font-family: var(--font-menu);
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    color: var(--cor-principal);
+    text-decoration: none;
+}
+
+:focus-visible {
+    outline: 3px solid var(--cor-destaque);
+    /* width,style,color */
+    outline-offset: 2px;
+}
+
+.topo {
+    background-color: #fff;
+    padding-block: 20px;
+    /* ele seta o padding no topo e no chão*/
+}
+
+.container {
+    max-width: var(--largura-maxima);
+    width: 100%;
+    margin: 0 auto;
+    /* o margin-inline:auto; seta um padding right e left*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5em;
+}
+
+.topo h1 {
+    height: 90px;
+    width: 331px;
+    background-image: url(../img/logoColor.svg);
+    margin-bottom: 0;
+    background-position: left center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+
+}
+
+.topo nav {
+    flex: 1;
+}
+
+.topo nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+/*se o pai do alemento não tem nenhuma medida definida,a unidade de medida em vai enteder que o pai é o navegador*/
+.topo nav ul li a {
+    color: var(--cor-principal);
+    /*o link ativo estara em var(--cor-destaque)*/
+    font-size: 1.2em;
+    text-transform: uppercase;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+    font-family: var(--font-menu);
+    padding-block: 0.5em;
+    padding-inline: 1.2em;
+
+}
+
+/* a hierarquia vence as class,em questão de preferencia */
+/* .topo nav ul li .ativo  */
+.ativo {
+    color: var(--cor-destaque) !important;
+}
+
+.topo nav ul li a:hover {
+    color: var(--cor-destaque);
+    transform: scale(1.05);
+}
+
+.topo nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0.2em;
+    width: 0%;
+    height: 2px;
+    background: var(--cor-destaque);
+    box-shadow: 0 0 10px var(--cor-destaque);
+    transition: width 0.3s ease;
+}
+
+.topo nav ul li a:hover::after,
+.topo nav ul li a.ativo::after {
+    width: 100%;
+}
+
+.redes {
+    display: flex;
+    gap: 1em;
+}
+
+.redes a {
+    inline-size: 32px;
+    block-size: 32px;
+    display: grid;
+    background-color: #1a1a1a;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.redes a:hover {
+    background-color: var(--cor-destaque);
+    transform: scale(1.1);
+    box-shadow: 0 0 10px var(--cor-principal);
+}
+
+/* #####################################################    INICIO BANNER    ########################################################################## */
+
+.banner .slick-next {
+    right: 100px;
+}
+
+.banner .slick-prev {
+    left: 80px;
+    z-index: 5;
+}
+
+.banner .slick-prev:before,
+.banner .slick-next:before {
+    font-size: 60px;
+    color: var(--cor-destaque);
+}
+
+/* #####################################################    INICIO AREA    ########################################################################## */
+.area {
+    background-color: var(--cor-principal);
+    margin: 50px 0;
+}
+
+.area h2 {
+    font-family: var(--font-menu);
+    font-size: 1.875em;
+    padding: 58px 0;
+    margin-bottom: 0;
+    line-height: 1em;
+}
+
+/* #####################################################    INICIO SOBRE    ########################################################################## */
+.sobre {
+    padding: 50px 0;
+}
+
+.imgSobre {
+    display: flex;
+    gap: 2.5em;
+}
+
+/* img 1  */
+
+.imgSobre img:nth-child(1) {
+    width: 480px;
+    border-radius: 0;
+}
+
+.imgSobre div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* selo */
+
+.imgSobre span {
+    background-color: var(--cor-principal);
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    top: 31px;
+    background-image: url(../img/selo.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    animation: rodar 25s linear infinite;
+    /* shorthand de animation : o nome da animação,o tempo,seu formato,e a infinidade */
+}
+
+@keyframes rodar {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* img 2 */
+
+.imgSobre img {
+    width: 320px;
+    border-radius: 0 6.25em 0 6.25em;
+    /* 100 / 16 = 6.25em*/
+}
+
+/* txtsobre */
+.sobre .container {
+    align-items: normal;
+}
+
+.txtSobre {
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.txtSobre h2 {
+    color: #1a1a1a;
+}
+
+.txtSobre h3 {
+    font-family: var(--font-menu);
+    font-size: 30px;
+    line-height: 1.1em;
+    color: #1a1a1a;
+}
+
+.txtSobre p {
+    margin-block-end: 0;
+    font-size: 20px;
+    text-indent: 20px;
+    line-height: 30px;
+    color: #1a1a1a;
+}
+
+.txtSobre a {
+    display: block;
+    text-align: center;
+    align-content: center;
+    width: 250px;
+    height: 50px;
+    font-size: 20px;
+    margin-top: 2.5em;
+    border-radius: 25px;
+    background-color: var(--cor-destaque);
+    color: #fff;
+}
+
+.txtSobre a:hover {
+    background-color: var(--cor-principal);
+}
+
+/* #####################################################    INICIO linguagens    ########################################################################## */
+
+.linguagens {
+    background-color: #00c2ff;
+    padding: 50px 0;
+}
+
+.linguagens>div {
+    max-width: var(--largura-maxima);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.linguagens .slick-slide {
+    margin: 50px;
+
+}
+
+.linguagens .slick-prev:before,
+.linguagens .slick-next:before {
+    font-size: 60px;
+    color: var(--cor-destaque);
+}
+
+.linguagens .slick-prev {
+    left: -65px;
+}
+
+/* #####################################################    INICIO serviços    ########################################################################## */
+
+.servico {
+    padding: 50px 0;
+}
+
+.servico .container {
+    flex-direction: column;
+    align-items: start;
+}
+
+.servico header h2 {
+    font-family: var(--font-menu);
+    font-size: 2, 5em;
+    margin-bottom: 1.25em;
+}
+
+.servico h3 {
+    font-size: 1.875em;
+    font-family: var(--font-menu);
+}
+
+.listaServico {
+    display: flex;
+    justify-content: space-between;
+}
+
+.painelServico {
+    width: 56%;
+    /*largura em pixels dividida por 100%(que é 1500) = 56%*/
+    background-color: var(--cor-principal);
+    padding: 2em;
+}
+
+.painelServico h4 {
+    font-family: var(--font-menu);
+    font-size: 1.875em;
+    margin-bottom: 1.25em;
+}
+
+.painelServico p {
+    font-size: 1.25em;
+    text-indent: 2em;
+    line-height: 1.875em;
+}
+
+.painelServico a {
+    display: block;
+    text-align: center;
+    align-content: center;
+    width: 250px;
+    height: 50px;
+    font-size: 1.25em;
+    margin-top: 2.5em;
+    border-radius: 25px;
+    background-color: var(--cor-destaque);
+    color: #fff;
+    text-transform: uppercase;
+    font-family: var(--font-menu);
+    transition: filter .2s;
+}
+
+.painelServico a:hover {
+    filter: brightness(.9);
+}
+
+/* estilo dos paines de textos */
+.oculto {
+    display: none;
+}
+
+.tabPainel {
+    width: 44%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.tabPainel a {
+    font-size: 1.875em;
+    align-items: center;
+    padding-left: 22%;
+    font-family: var(--font-menu);
+    display: inline-flex;
+    color: #333333;
+    height: 50px;
+    cursor: pointer;
+}
+
+.tabPainel a:hover {
+    background-image: linear-gradient(to right, var(--cor-principal) 0%, var(--cor-destaque) 100%);
+}
+
+.tabPainel .tabAtivo {
+    background-image: linear-gradient(to right, var(--cor-principal) 0%, var(--cor-destaque) 100%);
+}
+
+
+/* #####################################################    INICIO equipe    ########################################################################## */
+
+.equipe h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+
+/* DIVS PAIS */
+section.equipe {
+    background-color: var(--cor-principal);
+    padding: 50px 0;
+}
+
+section.equipe .container {
+    justify-content: center;
+    gap: 13.75em;
+}
+
+.filhos {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+
+/*  LINKS REDES */
+.container div .equipeImg {
+    display: flex;
+    gap: 3.125em;
+    position: absolute;
+    bottom: 78px;
+}
+
+.equipe .container div div a {
+    height: 50px;
+}
+
+.equipe .container div div a img {
+    width: 50px;
+    filter: drop-shadow(1px 1px 5px rgba(0, 0, 0, 0.418));
+}
+
+.equipe .container div div a img:hover {
+    transition: 0.2s;
+    scale: 1.15;
+    transform: translateY(-3px);
+    filter: invert(1);
+    filter: drop-shadow(4px 4px 6px black) invert(1);
+}
+
+
+/* TEXTOS  */
+.equipe .container div h3 {
+    text-align: center;
+    font-size: 30px;
+    font-family: var(--font-menu);
+    margin: 10px 0 0 0;
+}
+
+.equipe .container div p {
+    text-align: center;
+    font-size: 30px;
+    font-family: var(--font-base);
+    margin: 10px 0 0 0;
+}
+
+
+/* #####################################################    INICIO pq escolher    ########################################################################## */
+
+.pqEscolher {
+    padding: 50px 0;
+}
+
+.pqEscolher>div {
+    display: flex;
+    align-items: flex-end;
+    width: var(--largura-maxima);
+    margin: 0 auto;
+    gap: 2em;
+}
+
+.pqEscolher h2 {
+    font-family: var(--font-menu);
+    font-size: 2.5em;
+    margin-bottom: 50px;
+}
+
+.pqEscolher h3 {
+    font-family: var(--font-menu);
+    font-size: 1.875em;
+    margin-bottom: 50px;
+}
+
+.pqEscolher div div div:nth-child(2) {
+    display: flex;
+}
+
+.pqEscolher div div div:nth-child(2) div {
+    flex: 1;
+}
+
+.pqEscolher div div div div {
+    flex-direction: column;
+}
+
+.pqEscolher div div div div div {
+    height: 150px;
+    text-align: center;
+    padding: 1.25em;
+}
+
+.pqEscolher div div div div:nth-child(1) div:nth-child(1) {
+    background-color: var(--cor-destaque);
+    color: #fff;
+}
+
+.pqEscolher div div div div:nth-child(1) div:nth-child(2) {
+    background-color: var(--cor-principal);
+}
+
+.pqEscolher div div div div:nth-child(2) div:nth-child(1) {
+    background-color: var(--cor-principal);
+}
+
+.pqEscolher div div div div:nth-child(2) div:nth-child(2) {
+    background-color: var(--cor-destaque);
+    color: #fff;
+}
+
+.pqEscolher h4 {
+    font-family: var(--font-menu);
+    font-size: 1.875em;
+    margin-bottom: 0.3em;
+}
+
+.pqEscolher p {
+    text-indent: 2em;
+    font-size: 1.25em;
+    text-align: justify;
+    line-height: 1em;
+}
+
+/* #####################################################    INICIO video    ########################################################################## */
+
+.video {
+    background-image: url(../img/video.jpg);
+    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video a {
+    transition: transform 0.5s ease-in-out;
+}
+
+.video a:hover {
+    transform: scale(0.9);
+}
+
+.video img {
+    width: 100px;
+}
+
+/* #####################################################    INICIO DEPOIMENTOS    ########################################################################## */
+
+.depo {
+    padding: 50px 0;
+}
+
+.depo .container {
+    flex-direction: column;
+}
+
+.boxDepo {
+    display: flex;
+    gap: 2em;
+}
+
+.borda {
+    background: linear-gradient(90deg, var(--cor-destaque), var(--cor-principal), var(--cor-destaque));
+    width: 30%;
+    border-radius: 1em;
+    padding: 0.31em;
+    background-size: 200% 200%;
+    animation: bordaAnimada 5s linear infinite;
+}
+
+@keyframes bordaAnimada {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.borda>div {
+    background-color: #fff;
+    border-radius: inherit;
+    padding: 2em;
+    height: 500px;
+}
+
+.boxDepo ul {
+    display: flex;
+}
+
+.boxDepo img {
+    display: block;
+    width: auto;
+    margin: 0 auto 2em auto;
+    height: 150px;
+}
+
+.boxDepo ul {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.boxDepo ul img {
+    display: block;
+    margin: 0 auto 2em auto;
+    width: auto;
+    height: 40px;
+}
+
+.boxTitulo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.boxTitulo h3 {
+    font-family: var(--font-menu);
+    font-size: 1.875em;
+    margin-bottom: 0.5em;
+}
+
+.boxDepo p {
+    text-indent: 2em;
+    text-align: justify;
+    font-size: 1.25em;
+    line-height: 1.5em;
+}
+
+
+/* #####################################################    INICIO footer    ########################################################################## */
+
+.rodape>div:nth-child(1) {
+    background-color: var(--cor-principal);
+    padding: 70px 0;
+}
+
+.rodape>div:nth-child(2) {
+    background-color: var(--cor-destaque);
+}
+
+.rodape .container {
+    gap: 1em;
+}
+
+/* bloco 1 */
+.rodape .logo {
+    width: 22%;
+}
+
+.rodape .logo h2 {
+    font-size: 1.25em;
+    font-family: var(--font-menu);
+}
+
+.rodape .logo h2 span {
+    display: block;
+    text-align: right;
+}
+
+.rodape .logo ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.rodape .logo a {
+    inline-size: 50px;
+    block-size: 50px;
+    background-color: #1a1a1a;
+    border-radius: 50px;
+    display: grid;
+    transform: filter 0.2s ease;
+}
+
+.rodape .logo a:hover {
+    background-color: var(--cor-destaque);
+}
+
+
+/* bloco 2 */
+.rodape .menu {
+    width: 20%;
+    text-align: center;
+}
+
+.rodape .menu li {
+    margin-bottom: 15px;
+}
+
+.rodape .menu li:last-child {
+    margin-bottom: 0;
+}
+
+.rodape .menu a {
+    color: #1a1a1a;
+    font-size: 1.25em;
+    font-family: var(--font-menu);
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.rodape .menu a:hover {
+    color: var(--cor-destaque);
+    transform: scale(1.05);
+}
+
+.rodape .menu ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--cor-destaque);
+    box-shadow: 0 0 10px var(--cor-destaque);
+    transition: width 0.3s ease;
+}
+
+.rodape .menu ul li a:hover::after,
+.rodape .menu ul li a.ativo::after {
+    width: 100%;
+}
+
+/* bloco 3 */
+.rodape .end {
+    width: 23, 4%;
+    font-size: 1.25em;
+    text-align: center;
+}
+
+.rodape .end h2 {
+    font-family: var(--font-menu);
+    font-size: 1.5em;
+    margin-bottom: 38px;
+}
+
+.rodape .end a {
+    color: #1a1a1a;
+    display: block;
+}
+
+.rodape .end address {
+    line-height: 2.3em;
+}
+
+.rodape .end a:hover {
+    color: var(--cor-destaque);
+}
+
+
+
+/* bloco 4 */
+.rodape .escreva {
+    width: 30%;
+}
+
+.rodape .escreva h2 {
+    text-align: center;
+    font-size: 1.875em;
+    font-family: var(--font-menu);
+    margin-bottom: 20px;
+}
+
+.rodape .escreva form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+}
+
+.rodape .escreva input[type="email"] {
+    height: 40px;
+    border: 1px solid #1a1a1a;
+    border-radius: 25px;
+    padding: 0 12px;
+    outline: none;
+    width: 84%;
+}
+
+.rodape .escreva input[type="submit"] {
+    block-size: 30px;
+    inline-size: 30px;
+    background: transparent url(../img/seta.png);
+    float: right;
+    margin: 10px 5px 0 0;
+    border: 0;
+    cursor: pointer;
+}
+
+.rodape .escreva label {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    cursor: pointer;
+}
+
+.rodape .escreva input[type="checkbox"] {
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border: 1px solid #1a1a1a;
+    border-radius: 50%;
+    appearance: none;
+    transition: all 0.2 ease;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.rodape .escreva input[type="checkbox"]:checked::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    width: 4px;
+    height: 8px;
+    border-right: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+    transform: rotate(45deg);
+}
+
+/* copy */
+
+.rodape>div:nth-child(2) .container {
+    justify-content: space-around;
+}
+
+.rodape>div:nth-child(2) h2 {
+    font-size: 0.95em;
+    font-family: var(--font-menu);
+    margin-bottom: 0;
+    padding: 5px 0;
+    text-align: center;
+    color: #fff;
+}
+
+
+/* #################################################################################  PÁGINA SOBRE    ############################################################################################################################## */
+
+.missao,
+.visao,
+.valores {
+    padding-block: 50px;
+    background-color: #fff;
+}
+
+.missao .container,
+.visao .container,
+.valores .container {
+    box-sizing: border-box;
+    background-color: var(--cor-principal);
+    padding: 50px;
+    gap: 50px;
+}
+
+.missao img,
+.visao img,
+.valores img {
+    width: 400px;
+}
+
+.missao p,
+.visao p,
+.valores p {
+    text-indent: 40px;
+    white-space: pre-wrap;
+    font-family: var(--font-base);
+    font-size: 1.875em;
+    line-height: 40px;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.missao p span,
+.visao p span,
+.valores p span {
+    font-weight: bold;
+}
+
+
+
+/* #################################################################################  PÁGINA contato    ############################################################################################################################## */
+
+.formContato {
+    padding: 50px 0;
+    color: #333333;
+}
+
+.formContato .container {
+    flex-direction: column;
+    text-align: center;
+    align-items: normal;
+    gap: 1.2em;
+}
+
+.formContato h2 {
+    font-size: 2.5em;
+    font-family: var(--font-menu);
+}
+
+.formContato h3 {
+    font-size: 1.875em;
+    font-family: var(--font-menu);
+}
+
+.formContato form {
+    background-color: var(--cor-destaque);
+    padding: 50px 30px;
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+}
+
+.form-esquerda {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2.2em;
+}
+
+.form-esquerda input,
+.form-esquerda select {
+    height: 46px;
+    padding-left: 1em;
+    border: 1.5px solid #1a1a1a;
+    border-radius: 8px;
+    font-size: 1.25em;
+    outline: none;
+}
+
+.formContato select {
+    color: #9f9f9f;
+}
+
+.form-direita {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.form-direita textarea {
+    height: 280px;
+    padding-left: 1em;
+    padding-top: 1em;
+    border: 1.5px solid #1a1a1a;
+    border-radius: 8px;
+    font-size: 1.25em;
+    resize: none;
+    outline: none;
+}
+
+.botoes {
+    display: flex;
+    gap: 2.5em;
+}
+
+.botoes button {
+    background-color: var(--cor-principal);
+    color: #1a1a1a;
+    border: none;
+    border-radius: 15px;
+    width: 250px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: 0.2s ease;
+}
+
+/*
+######################################################################
+######################################################################
+##########################    PG SERVICO     #########################
+######################################################################
+######################################################################
+*/
+.pg-servico {
+    padding: 50px 0;
+}
+
+.pg-servico .container {
+    flex-direction: column;
+    text-align: center;
+}
+
+.pg-servico h2 {
+    font-size: 2.5em;
+    font-family: var(--font-menu);
+}
+
+.pg-servico h3 {
+    font-size: 1.875em;
+    font-family: var(--font-menu);
+}
+
+.pg-servico ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4em;
+}
+
+.pg-servico ul li {
+    width: 45%;
+}
+
+.pg-servico ul>li>a {
+    display: flex;
+    border-radius: 1em;
+    box-shadow: 0 2px 5px var(--cor-destaque);
+    overflow: hidden;
+    transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.pg-servico ul>li>a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.pg-servico figure {
+    flex: 0 0 300px;
+    /*
+      flex: <flex-grow> <flex-shrink> <flex-basis>;
+      flex-grow: Define se o item pode crescer para ocupar espaço livre no contêiner;
+      flex-shrink: Define se o item pode encolher quando o contêiner for menor do que a soma dos itens;
+      flex-basis: Define o tamanho base inicial do item antes de aplicar grow ou shrink.  
+    */
+    aspect-ratio: 1/1;
+    background: #f2f2f2;
+    overflow: hidden;
+}
+
+.lista-conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pg-servico ul h3 {
+    font-family: var(--font-menu);
+    font-size: 1.5em;
+    margin-top: 15px;
+}
+
+.pg-servico ul p {
+    padding: 0 15px;
+    color: #1a1a1a;
+    line-height: 1.5em;
+}
+
+.pg-servico ul span {
+    display: flex;
+    justify-content: center;
+    color: #1a1a1a;
+    padding: 0.5em 1em;
+    background-color: var(--cor-principal);
+}
+
+
+
+/*
+######################################################################
+######################################################################
+##########################    PG CLIENTE     #########################
+######################################################################
+######################################################################
+*/
+
+.cliente {
+    padding: 50px 0;
+}
+
+.cliente .container {
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.cliente-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    width: 24%;
+    aspect-ratio: 9/16;
+    cursor: pointer;
+}
+
+.cliente-item img {
+    transition: all 0.4s ease;
+}
+
+.cliente-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 106, 0, 0.5);
+    opacity: 0;
+    transition: all 0.4s ease;
+    z-index: 1;
+}
+
+.cliente-item a {
+    position: absolute;
+    inset: 0;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+    z-index: 2;
+}
+
+.cliente-item a .conteudo span {
+    font-size: 1.5em;
+    opacity: 0.8;
+}
+
+.cliente-item a .conteudo h4 {
+    font-size: 1.2em;
+    margin-top: 5px;
+    letter-spacing: .3em;
+}
+
+
+.cliente-item:hover img {
+    transform: scale(1.1);
+}
+
+.cliente-item:hover::before {
+    opacity: 1;
+}
+
+.cliente-item:hover a {
+    opacity: 1;
+    transform: translateY(0);
+}

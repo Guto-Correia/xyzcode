@@ -1,0 +1,31 @@
+<header class="topo">
+        <div class="container">
+            <!-- div apenas para estilização,apenas para facilitar -->
+            <h1>XYZ Code - Coordenamos ideais,codificamos soluções
+            </h1>
+
+            <!-- MENU -->
+            <?php 
+            // pagar o nome da página atual via url
+            $pgAtual = basename(path: $_SERVER['REQUEST_URI']);
+            // echo( $pgAtual );
+            ?>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.php" class=" <?= ($pgAtual == "index.php") ? 'ativo' : '' ?>">Home</a></li>
+                    <li><a href="sobre.php" class=" <?= ($pgAtual == "sobre.php") ? 'ativo' : '' ?>">Sobre</a></li>
+                    <li><a href="servico.php" class=" <?= ($pgAtual == "servico.php") ? 'ativo' : '' ?>">Serviço</a></li>
+                    <li><a href="cliente.php" class=" <?= ($pgAtual == "cliente.php") ? 'ativo' : '' ?>">Cliente</a></li>
+                    <li><a href="equipe.php" class=" <?= ($pgAtual == "equipe.php") ? 'ativo' : '' ?>">equipe</a></li>
+                    <li><a href="contato.php" class=" <?= ($pgAtual == "contato.php") ? 'ativo' : '' ?>">Contato</a></li>
+                </ul>
+            </nav>
+            <ul class="redes">
+                <li><a href="#"><img src="img/faceBlack.svg" alt="logo Facebook" sizes="50px"></a></li>
+                <li><a href="#"><img src="img/instaBlack.svg" alt="logo Instagram" sizes="50px"></a></li>
+                <li><a href="#"><img src="img/linkeBlack.svg" alt="logo Linkedin" sizes="50px"></a></li>
+                <li><a href="#"><img src="img/whatsBlack.svg" alt="logo whatsapp" sizes="50px"></a></li>
+            </ul>
+        </div>
+    </header>
