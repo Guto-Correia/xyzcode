@@ -65,15 +65,80 @@
 <body>
 
     <!-- incio: header -->
-    <?php require_once("conteudo/header.php") ?>
+    <header class="topo">
+        <div class="container">
+            <h1>XYZ Code - Coordenamos ideais,codificamos soluções
+            </h1>   
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="servico.html">Serviço</a></li>
+                    <li><a href="cliente.html">Cliente</a></li>
+                    <li><a href="equipe.html">equipe</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+            <ul class="redes">
+                <li><a href="#"><img src="img/faceBlack.svg" alt="logo Facebook" sizes="50px"></a></li>
+                <li><a href="#"><img src="img/instaBlack.svg" alt="logo Instagram" sizes="50px"></a></li>
+                <li><a href="#"><img src="img/linkeBlack.svg" alt="logo Linkedin" sizes="50px"></a></li>
+                <li><a href="#"><img src="img/whatsBlack.svg" alt="logo whatsapp" sizes="50px"></a></li>
+            </ul>
+        </div>
+    </header>
 
     <main>
 
         <!-- inicio :banner -->
-        <?php require_once("conteudo/banner.php") ?>
+        <section class="banner">
+    <img src="img/desenvolvimento-sistemas-web.png" alt="Banner da Agência XYZ Code - uma tela com códigos">
+    <img src="img/marketing-digital.png" alt="Banner da Agência XYZ Code - uma tela com códigos">
+    <img src="img/desenvolvimento-web-sites-institucionais.png" alt="Banner da Agência XYZ Code - uma tela com códigos">
+    <img src="img/desenvolvimento-aplicativo-mobile.png" alt="Banner da Agência XYZ Code - uma tela com códigos">
+    <img src="img/marketing-digital-rede-sociais.png" alt="Banner da Agência XYZ Code - uma tela com códigos">
+    <img src="img/desenvolvimento-web-sites.png" alt="Banner da Agência XYZ Code - uma tela com códigos">
+        </section>
 
         <!-- inicio :sobre -->
-        <?php require_once("conteudo/sobre.php") ?>
+        <section class="sobre wow animate__animated animate__fadeInUp">
+            <div class="container">
+
+                <!-- imagem -->
+                <div class="imgSobre">
+
+                    <img src="img/sobre1.png" alt="Sobre a agência XYZ Code">
+
+                    <div class="animate__animated animate__backInDown">
+                        <span></span>
+                        <img src="img/sobre2.png" alt="Equipe sobre a agência XYZ Code desde 2025">
+                    </div>
+                </div>
+
+                <!-- texto -->
+                <div class="txtSobre">
+                    <h2>SOBRE NÓS</h2>
+
+                    <h3>Coordenamos ideias,<br>
+                        Codificamos soluções</h3>
+
+                    <div>
+                        <p>A XYZ Code nasceu com o propósito de transformar ideias em soluções digitais eficientes.
+                            Localizada em São Miguel Paulista, nossa agência foi criada com foco em desenvolvimento de
+                            sites e sistemas web, sempre unindo criatividade, tecnologia e estratégia. Acreditamos que
+                            cada projeto é único e, por isso, buscamos entender a necessidade de cada cliente para
+                            entregar resultados que realmente façam a diferença. </p>
+                        <p>“Coordenamos ideias, Codificamos Soluções” representa exatamente o que fazemos: transformamos
+                            conceitos em aplicações reais, conectando marcas ao mundo digital com design moderno,
+                            performance e funcionalidade. Com uma equipe criativa e dedicada, nosso objetivo é
+                            simplificar a vida dos clientes, criando experiências digitais inovadoras.</p>
+                    </div>
+
+                    <a href="#">SAIBA MAIS</a>
+                </div>
+
+            </div>
+        </section>
 
         <!-- inicio :missao -->
         <section class="missao">
@@ -106,16 +171,205 @@
         </section>
 
         <!-- começo: pqescolher -->
-        <?php require_once("conteudo/pq-escolher.php") ?>
+        <section class="pqEscolher wow animate__animated animate__fadeInUp">
+            <div>
+                <div>
+                    <div> <!--titulo-->
+                        <h2>PORQUE NOS ESCOLHER?</h2>
+                        <h3>Sua jornada digital começa com a XYZ Code</h3>
+                    </div>
+
+                    <div> <!-- Pegando os quatros box-->
+                        <div> <!-- box da esquerda-->
+
+                            <div> <!-- box laranja-->
+                                <h4>Time Criativo</h4>
+                                <p>Contamos com uma equipe apaixonada por inovação, que une talento e estratégia para
+                                    entregar projetos únicos e marcantes</p>
+                            </div>
+
+                            <div> <!--box azul-->
+                                <h4>Soluções Perfeitas</h4>
+                                <p>Nosso foco é entregar resultados completos: desing, tecnologia e estrategias em
+                                    harmonia para gerar impacto positivo.</p>
+                            </div>
+
+                        </div>
+                        <div> <!-- box da direita-->
+                            <div> <!-- box laranja-->
+                                <h4>Serviço Dedicados</h4>
+                                <p>Cada cliente recebe atenção exclusiva, com soluções pensadas sob medida para atender
+                                    as suas necessidades reais.</p>
+                            </div>
+                            <div> <!--box azul-->
+                                <h4>Suporte 24/6</h4>
+                                <p>Estamos sempre prontos para atender nossos clientes de forma rápida e eficiente,
+                                    garantindo suporte em praticamente todos os momentnto da semana</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <img src="img/triangulo.png" alt="imagem ilustrativa">
+            </div>
+        </section>
 
         <!-- inicio :area -->
-        <?php require_once("conteudo/area.php") ?>
+        <section class="area wow animate__animated animate__fadeInUp">
+    <div class="container">
+        <h2 class="animate__animated animate__shakeX">DESENVOLVIMENTO <br>
+            WEB SITES</h2>
+
+        <h2 class="animate__animated animate__shakeY">DESENVOLVIMENTO <br>
+            SISTEMAS WEB</h2>
+
+        <h2 class="animate__animated animate__shakeX">DESENVOLVIMENTO <br>
+            APLICATIVO MOBILE</h2>
+
+        <h2 class="animate__animated animate__shakeY">MARKETING <br>
+            DIGITAL</h2>
+
+    </div>
+        </section>
 
         <!-- começo: depoimentos -->
-        <?php require_once("conteudo/depo.php") ?>
+        <section class="depo wow animate__animated animate__fadeInUp">
+            <div class="container">
+                <h2>Depoimentos</h2>
+                <div class="boxDepo">
+
+
+                    <div class="borda">
+                        <div>
+                            <img src="img/logoVivaBem.png" alt="Logo do cliente VivaBem">
+                            <ul>
+                                <li><img src="img/estrela.png" alt="estrla de avaliação"></li>
+                                <li><img src="img/estrela.png" alt="estrla de avaliação"></li>
+                                <li><img src="img/estrela.png" alt="estrla de avaliação"></li>
+                                <li><img src="img/estrela.png" alt="estrla de avaliação"></li>
+                                <li><img src="img/estrela.png" alt="estrla de avaliação"></li>
+                            </ul>
+                            <div class="boxTitulo">
+                                <h3>Dr.Celso</h3>
+                                <h3>12/09/2025</h3>
+                            </div>
+                            <p>A XYZ Code transformou a presença digital da minha academia. Hoje conseguimos divulgar
+                                nossos serviços com muito mais clareza e profissionalismo, atraindo novos alunos todos
+                                os dias. Finvestimento que trouxe resultado real.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="borda">
+                        <div>
+                            <img src="img/logoKioficina.png" alt="Logo do cliente KiOficina">
+                            <ul>
+                                <li><img src="img/estrela.png" alt="estrla de avaliação"></li>
+                                <li><img src="img/estrela.png" alt="estrla de avaliação"></li>
+                                <li><img src="img/estrela.png" alt="estrla de avaliação"></li>
+                                <li><img src="img/estrela.png" alt="estrla de avaliação"></li>
+                                <li><img src="img/estrela.png" alt="estrla de avaliação"></li>
+                            </ul>
+                            <div class="boxTitulo">
+                                <h3>Jorge (Mecanico)</h3>
+                                <h3>01/07/2025</h3>
+                            </div>
+                            <p>Eu precisava de um site simples, mas que mostrasse meu trabalho com qualidade. A equipe
+                                da XYZ Code me surpreendeu, fez tudo de forma prática e me ajudou a conquistar novos
+                                clientes na oficina.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="borda">
+                        <div>
+                            <img src="img/logoFutuedu.svg" alt="Logo do cliente FutuEdu">
+                            <ul>
+                                <li><img src="img/estrela.png" alt="estrla de avaliação"></li>
+                                <li><img src="img/estrela.png" alt="estrla de avaliação"></li>
+                                <li><img src="img/estrela.png" alt="estrla de avaliação"></li>
+                                <li><img src="img/estrela.png" alt="estrla de avaliação"></li>
+                                <li><img src="img/estrela.png" alt="estrla de avaliação"></li>
+                            </ul>
+                            <div class="boxTitulo">
+                                <h3>Prof. Ricardo</h3>
+                                <h3>28/10/2024</h3>
+                            </div>
+                            <p>Com a ajuda da XYZ Code conseguimos lançar nosso portal educacional. Agora, nossos alunos
+                                têm acesso fácil às informações e recursos online, o que tornou nosso instituto mais
+                                moderno e conectado.</p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
 
         <!-- começo: footer -->
-        <?php require_once("conteudo/footer.php") ?>
+        <footer class="rodape wow animate__animated animate__fadeInUp">
+     <div>
+         <div class="container">
+             <div class="logo">
+                 <img src="img/logoBlack.svg" alt="logo da empresa">
+                 <h2>Coordenamos ideias <span>Codificamos soluções</span></h2>
+                 <ul>
+                     <li><a href="#" target="_blank"><img src="img/faceBlack.svg"
+                                 alt="logo da rede social facebook"></a></li>
+                     <li><a href="#" target="_blank"><img src="img/instaBlack.svg"
+                                 alt="logo da rede social instagram"></a></li>
+                     <li><a href="#" target="_blank"><img src="img/linkeBlack.svg"
+                                 alt="logo da rede social linkedin"></a></li>
+                     <li><a href="#" target="_blank"><img src="img/whatsBlack.svg"
+                                 alt="logo da rede social whatsapp"></a></li>
+                 </ul>
+             </div>
+
+             <div class="menu">
+                 <ul>
+                     <li><a href="index.php" class=" <?= ($pgAtual == "index.php") ? 'ativo' : '' ?>">Home</a></li>
+                     <li><a href="sobre.php" class=" <?= ($pgAtual == "sobre.php") ? 'ativo' : '' ?>">Sobre</a></li>
+                     <li><a href="servico.php" class=" <?= ($pgAtual == "servico.php") ? 'ativo' : '' ?>">Serviço</a></li>
+                     <li><a href="cliente.php" class=" <?= ($pgAtual == "cliente.php") ? 'ativo' : '' ?>">Cliente</a></li>
+                     <li><a href="equipe.php" class=" <?= ($pgAtual == "equipe.php") ? 'ativo' : '' ?>">Equipe</a></li>
+                     <li><a href="contato.php" class=" <?= ($pgAtual == "contato.php") ? 'ativo' : '' ?>">Contato</a></li>
+                 </ul>
+             </div>
+
+             <div class="end">
+                 <h2>CONTATE-NOS</h2>
+                 <address>
+                     Av. Marechal Tito, 1500 <br>
+                     São Miguel Paulista - São Paulo - SP <br>
+                     <a href="mailto/xyzcode@smpsistema.com.br">xyzcode@smpsistema.com.br</a>
+                     <a href="tel:+5511999999999">(11) 99999-9999</a>
+                 </address>
+             </div>
+
+             <div class="escreva">
+                 <h2>INSCREVA-SE</h2>
+                 <p></p>
+                 <form action="#" method="get">
+                     <div>
+                         <input type="email" name="email" placeholder="informe seu email" required>
+                         <input type="submit" value="">
+                     </div>
+                     <label>
+                         <input type="checkbox" name="ckEmail" required>
+                         <span>Aceita receber informações por e-mail?</span>
+                     </label>
+                 </form>
+             </div>
+         </div>
+     </div>
+
+     <div>
+         <div class="container">
+             <h2>Copyright ® 2025 - Criado e Desenvolvido por XYZ Code</h2>
+             <h2>TIPI05 - Senac São Miguel Paulista</h2>
+         </div>
+     </div>
+            </footer>
 
     </main>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>

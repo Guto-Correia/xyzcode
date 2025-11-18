@@ -65,7 +65,28 @@
 <body>
 
     <!-- incio: header -->
-    <?php require_once("conteudo/header.php") ?>
+    <header class="topo">
+        <div class="container">
+            <h1>XYZ Code - Coordenamos ideais,codificamos soluções
+            </h1>   
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="servico.html">Serviço</a></li>
+                    <li><a href="cliente.html">Cliente</a></li>
+                    <li><a href="equipe.html">equipe</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+            <ul class="redes">
+                <li><a href="#"><img src="img/faceBlack.svg" alt="logo Facebook" sizes="50px"></a></li>
+                <li><a href="#"><img src="img/instaBlack.svg" alt="logo Instagram" sizes="50px"></a></li>
+                <li><a href="#"><img src="img/linkeBlack.svg" alt="logo Linkedin" sizes="50px"></a></li>
+                <li><a href="#"><img src="img/whatsBlack.svg" alt="logo whatsapp" sizes="50px"></a></li>
+            </ul>
+        </div>
+    </header>
 
     <main>
 
@@ -179,8 +200,42 @@
         </section>
 
         <!-- começo: Linguagens -->
-        <?php require_once("conteudo/linguagens.php") ?>
+        <section class="linguagens wow animate__animated animate__fadeInUp">
+            <div>
+                <h2> LINGUAGENS E FERRAMENTAS</h2>
+                <div>
+                    <img src="img/html1.png" alt="imagem do html">
+                    <img src="img/css1.png" alt="imagem do css">
+                    <img src="img/js1.png" alt="imagem do javascript">
+                    <img src="img/vs1.png" alt="imagem do vscode">
+                    <img src="img/bootstrap.png" alt="imagem do bootstrap">
+
+                    <img src="img/html1.png" alt="imagem do html">
+                    <img src="img/css1.png" alt="imagem do css">
+                    <img src="img/js1.png" alt="imagem do javascript">
+                    <img src="img/vs1.png" alt="imagem do vscode">
+                    <img src="img/bootstrap.png" alt="imagem do bootstrap">
+                </div>
+            </div>
+        </section>
+
         <!-- inicio :area -->
+         <section class="area wow animate__animated animate__fadeInUp">
+    <div class="container">
+        <h2 class="animate__animated animate__shakeX">DESENVOLVIMENTO <br>
+            WEB SITES</h2>
+
+        <h2 class="animate__animated animate__shakeY">DESENVOLVIMENTO <br>
+            SISTEMAS WEB</h2>
+
+        <h2 class="animate__animated animate__shakeX">DESENVOLVIMENTO <br>
+            APLICATIVO MOBILE</h2>
+
+        <h2 class="animate__animated animate__shakeY">MARKETING <br>
+            DIGITAL</h2>
+
+    </div>
+        </section>
 
         <!-- começo: video -->
         <section class="video">
@@ -190,7 +245,69 @@
         </section>
 
         <!-- começo: footer -->
-        <?php require_once("conteudo/footer.php") ?>
+        <footer class="rodape wow animate__animated animate__fadeInUp">
+     <div>
+         <div class="container">
+             <div class="logo">
+                 <img src="img/logoBlack.svg" alt="logo da empresa">
+                 <h2>Coordenamos ideias <span>Codificamos soluções</span></h2>
+                 <ul>
+                     <li><a href="#" target="_blank"><img src="img/faceBlack.svg"
+                                 alt="logo da rede social facebook"></a></li>
+                     <li><a href="#" target="_blank"><img src="img/instaBlack.svg"
+                                 alt="logo da rede social instagram"></a></li>
+                     <li><a href="#" target="_blank"><img src="img/linkeBlack.svg"
+                                 alt="logo da rede social linkedin"></a></li>
+                     <li><a href="#" target="_blank"><img src="img/whatsBlack.svg"
+                                 alt="logo da rede social whatsapp"></a></li>
+                 </ul>
+             </div>
+
+             <div class="menu">
+                 <ul>
+                     <li><a href="index.php" class=" <?= ($pgAtual == "index.php") ? 'ativo' : '' ?>">Home</a></li>
+                     <li><a href="sobre.php" class=" <?= ($pgAtual == "sobre.php") ? 'ativo' : '' ?>">Sobre</a></li>
+                     <li><a href="servico.php" class=" <?= ($pgAtual == "servico.php") ? 'ativo' : '' ?>">Serviço</a></li>
+                     <li><a href="cliente.php" class=" <?= ($pgAtual == "cliente.php") ? 'ativo' : '' ?>">Cliente</a></li>
+                     <li><a href="equipe.php" class=" <?= ($pgAtual == "equipe.php") ? 'ativo' : '' ?>">Equipe</a></li>
+                     <li><a href="contato.php" class=" <?= ($pgAtual == "contato.php") ? 'ativo' : '' ?>">Contato</a></li>
+                 </ul>
+             </div>
+
+             <div class="end">
+                 <h2>CONTATE-NOS</h2>
+                 <address>
+                     Av. Marechal Tito, 1500 <br>
+                     São Miguel Paulista - São Paulo - SP <br>
+                     <a href="mailto/xyzcode@smpsistema.com.br">xyzcode@smpsistema.com.br</a>
+                     <a href="tel:+5511999999999">(11) 99999-9999</a>
+                 </address>
+             </div>
+
+             <div class="escreva">
+                 <h2>INSCREVA-SE</h2>
+                 <p></p>
+                 <form action="#" method="get">
+                     <div>
+                         <input type="email" name="email" placeholder="informe seu email" required>
+                         <input type="submit" value="">
+                     </div>
+                     <label>
+                         <input type="checkbox" name="ckEmail" required>
+                         <span>Aceita receber informações por e-mail?</span>
+                     </label>
+                 </form>
+             </div>
+         </div>
+     </div>
+
+     <div>
+         <div class="container">
+             <h2>Copyright ® 2025 - Criado e Desenvolvido por XYZ Code</h2>
+             <h2>TIPI05 - Senac São Miguel Paulista</h2>
+         </div>
+     </div>
+            </footer>
 
     </main>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
