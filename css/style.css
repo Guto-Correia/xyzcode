@@ -57,21 +57,22 @@ a {
     outline-offset: 2px;
 }
 
-.topo {
-    background-color: #fff;
-    padding-block: 20px;
-    /* ele seta o padding no topo e no chão*/
-}
-
 .container {
     max-width: var(--largura-maxima);
     width: 100%;
     margin: 0 auto;
-    /* o margin-inline:auto; seta um padding right e left*/
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 2.5em;
+}
+
+/* header */
+
+.topo {
+    background-color: #fff;
+    padding-block: 20px;
+    /* ele seta o padding no topo e no chão*/
 }
 
 .topo h1 {
@@ -85,10 +86,10 @@ a {
     text-indent: -9999px;
 
 }
-
+/* 
 .topo nav {
     flex: 1;
-}
+} */
 
 .topo nav ul {
     display: flex;
@@ -97,6 +98,7 @@ a {
 
 /*se o pai do alemento não tem nenhuma medida definida,a unidade de medida em vai enteder que o pai é o navegador*/
 .topo nav ul li a {
+    display: block;
     color: var(--cor-principal);
     /*o link ativo estara em var(--cor-destaque)*/
     font-size: 1.2em;
@@ -771,7 +773,7 @@ section.equipe .container {
 
 /* bloco 3 */
 .rodape .end {
-    width: 23, 4%;
+    width: 23%;
     font-size: 1.25em;
     text-align: center;
 }
@@ -816,6 +818,7 @@ section.equipe .container {
 }
 
 .rodape .escreva input[type="email"] {
+    text-align: center;
     height: 40px;
     border: 1px solid #1a1a1a;
     border-radius: 25px;
@@ -848,7 +851,7 @@ section.equipe .container {
     border: 1px solid #1a1a1a;
     border-radius: 50%;
     appearance: none;
-    transition: all 0.2 ease;
+    transition: all 0.2s ease;
     outline: none;
     cursor: pointer;
     position: relative;

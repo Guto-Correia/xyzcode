@@ -1,0 +1,336 @@
+/* layout mobile */
+/* note- 993 até 1200 */
+/* tablet- 768 até 992 */
+/* cell- 0 até 767 */
+
+/* note- 993 até 1200 */
+@media (max-width: 1200px) {
+
+    /* #####################################################    INICIO AREA    ########################################################################## */
+    .topo .container {
+        justify-content: space-around;
+        gap: 0px;
+    }
+
+    .topo nav ul li a {
+        display: block;
+        font-size: 1em;
+        padding-inline: 0.5em;
+    }
+
+    /* #####################################################    INICIO AREA    ########################################################################## */
+    .area .container {
+        justify-content: space-evenly;
+    }
+
+    .area h2 {
+        font-size: 1.5em;
+    }
+
+    /* #####################################################    INICIO SOBRE    ########################################################################## */
+    .imgSobre img:nth-child(1) {
+        display: none;
+    }
+
+    /* #####################################################    INICIO linguagens    ########################################################################## */
+    .linguagens .slick-prev {
+        left: 45%;
+        top: 100%;
+    }
+
+    .linguagens .slick-next {
+        left: 55%;
+        top: 100%;
+    }
+
+    /* #####################################################    INICIO pq escolher    ########################################################################## */
+    .pqEscolher>div {
+        width: 100%;
+    }
+
+    .pqEscolher div img {
+        max-width: 329px;
+    }
+
+    /* #####################################################    INICIO DEPOIMENTOS    ########################################################################## */
+    .depo .container {
+        align-items: flex-start;
+    }
+
+    .depo .container h2 {
+        align-self: center;
+    }
+
+    .boxDepo {
+        width: 100%;
+        justify-content: space-evenly;
+        gap: 0px;
+    }
+
+    .borda>div {
+        height: 48vw;
+        max-height: 500px;
+        padding: 10px;
+    }
+
+    .boxDepo img {
+        height: 80px;
+    }
+
+    .boxDepo ul img {
+        max-width: 40px;
+        height: auto;
+        width: 100%;
+    }
+
+    .boxTitulo h3 {
+        font-size: 1.7em;
+    }
+}
+
+/* tablet- 768 até 992 */
+@media (max-width: 992px) {
+    .banner {
+        display: block;
+    }
+}
+
+/* button header */
+@media not all and (max-width: 768px) {
+
+    .abrir-menu,
+    .fechar-menu {
+        display: none;
+    }
+}
+
+/* cell- 0 até 767 */
+@media (max-width: 767px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    :root {
+        --largura-maxima: 300px;
+    }
+
+    h2 {
+        font-size: 1.25rem !important;
+    }
+
+    h3 {
+        font-size: 0.8125rem !important;
+    }
+
+    p {
+        font-size: 0.625rem !important;
+    }
+
+    /* HEADER */
+    header.topo h1 {
+        width: 185px;
+    }
+
+    .topo nav {
+        background-color: #33cfffcc;
+        position: fixed;
+        max-width: 400px;
+        width: 50%;
+        height: 100%;
+        top: 0px;
+        right: -200px;
+        z-index: 100;
+        transition: right 1s ease-in-out;
+    }
+
+    .menu-ativo .topo nav{
+        right: 0;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    /* icones do menu */
+    .abrir-menu {
+        background-image: url(../img/abrir-menu.png);
+        display: block;
+        border: none;
+        padding: 15px;
+        background-size: cover;
+    }
+
+    .fechar-menu {
+        background-image: url(../img/fechar-menu.png);
+        background-color: #33cfffcc;
+        display: block;
+        border: none;
+        padding: 15px;
+        background-size: cover;
+    }
+
+    header .redes {
+        display: none;
+    }
+
+    /* AREA */
+    .banner {
+        display: none;
+    }
+
+    /* AREA */
+    .area {
+        display: none;
+    }
+
+    /* SOBRE */
+    .imgSobre {
+        display: none;
+    }
+
+    /* LINGUAGENS */
+    .linguagens {
+        display: none;
+    }
+
+    /* SERVIÇO */
+    .tabPainel {
+        display: none;
+    }
+
+    /* EQUIPE */
+    section.equipe .container {
+        justify-content: center;
+        gap: 1.25em;
+    }
+
+    section.equipe .container .filhos>img {
+        max-width: 120px;
+    }
+
+    .container div .equipeImg {
+        gap: 0.625em;
+        bottom: 58px;
+    }
+
+    .equipe .container div div a img {
+        width: 30px;
+    }
+
+    /* PQESCOLHER */
+    .pqEscolher {
+        display: none;
+    }
+
+    /* VIDEO */
+    .video {
+        height: 100px;
+    }
+
+    .video img {
+        width: 30px;
+    }
+
+    /* DEPOIMENTOS */
+    .depo .boxDepo {
+        flex-direction: column;
+
+        box-sizing: border-box;
+    }
+
+    .depo .boxDepo .borda:nth-child(2),
+    .depo .boxDepo .borda:nth-child(3) {
+        display: none;
+    }
+
+    .depo .boxDepo .borda {
+        width: 100%;
+    }
+
+    .borda>div {
+        height: auto;
+    }
+
+    /* RODAPE */
+    .rodape div .container {
+        flex-direction: column;
+    }
+
+    .rodape div:first-child .container .logo,
+    .rodape div:first-child .container .menu {
+        display: none;
+    }
+
+    .rodape .end {
+        width: auto;
+    }
+
+    .rodape .end address {
+        font-size: 0.75rem;
+        line-height: 1.2rem;
+    }
+
+    .rodape .end address a:nth-child(3) {
+        margin-top: 10px;
+    }
+
+    .rodape .escreva {
+        width: auto;
+    }
+
+    .rodape .escreva form {
+        align-items: center;
+    }
+
+    .rodape .escreva form div {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .rodape .escreva input[type="email"] {
+        height: 20px;
+        padding: 0 12px;
+        max-width: 200px;
+        width: 100%;
+    }
+
+    .rodape .escreva input[type="submit"] {
+        scale: 50%;
+        block-size: 30px;
+        inline-size: 30px;
+        float: none;
+        margin: 0 5px 0 0;
+    }
+
+    .rodape .escreva label {
+        gap: 0px;
+    }
+
+    .rodape .escreva input[type="checkbox"] {
+        height: 10px;
+        width: 10px;
+    }
+
+    .rodape .escreva input[type="checkbox"]:checked::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 2px;
+        width: 2px;
+        height: 4px;
+        border-right: 2px solid #000000;
+        border-bottom: 2px solid #000000;
+        transform: rotate(45deg);
+    }
+
+    /* COPY */
+    .rodape div:last-child .container {
+        gap: 0px;
+    }
+
+    .rodape div:last-child .container h2 {
+        font-size: 0.5rem !important;
+        padding: 0px;
+    }
+}
